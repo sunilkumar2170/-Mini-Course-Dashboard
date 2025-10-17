@@ -1,0 +1,80 @@
+.otp-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  font-family: "Poppins", sans-serif;
+}
+
+.otp-card {
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.otp-card h2 {
+  color: #4f46e5;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.otp-subtext {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.5);
+}
+
+.otp-btn {
+  background: #4f46e5;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.otp-btn:hover {
+  background: #4338ca;
+}
+
+.otp-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
