@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
-import "./OtpVerify.css"; // 👈 separate CSS for design
+import "./OtpVerify.css";
 
 const OtpVerify = ({ email }) => {
   const [otp, setOtp] = useState("");
@@ -21,8 +21,9 @@ const OtpVerify = ({ email }) => {
       const data = await res.json();
       alert(data.msg);
 
+    
       if (data.msg.toLowerCase().includes("success")) {
-        navigate("/dashboard");
+        navigate("/main");  
       }
     } catch (err) {
       console.error(err);

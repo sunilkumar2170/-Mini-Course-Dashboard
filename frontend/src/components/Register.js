@@ -10,6 +10,9 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // 🔹 Google Auth Redirect URL (backend route)
+  const GOOGLE_AUTH_URL = "http://localhost:5000/api/auth/google";
+
   const handleRegister = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -32,6 +35,11 @@ const Register = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  // 🔹 Handle Google Login Click
+  const handleGoogleLogin = () => {
+    window.location.href = GOOGLE_AUTH_URL;
   };
 
   if (step === "otp") {
@@ -83,6 +91,20 @@ const Register = () => {
             {loading ? "Please wait..." : "Register"}
           </button>
         </form>
+
+        {/* 🔹 Divider */}
+        <div className="divider">
+          <span>or</span>
+        </div>
+
+        {/* 🔹 Google Login Button */}
+        <button className="google-btn" onClick={handleGoogleLogin}>
+          <img
+            src="https://developers.google.com/identity/images/g-logo.png"
+            alt="Google logo"
+          />
+          Continue with Google
+        </button>
 
         <p className="login-link">
           Already have an account? <a href="/login">Login</a>

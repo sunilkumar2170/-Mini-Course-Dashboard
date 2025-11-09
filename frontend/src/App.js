@@ -3,6 +3,7 @@ import Register from "./components/Register";
 import OtpVerify from "./components/OtpVerify";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
+import MainPage from "./components/MainPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/verify-otp" element={<OtpVerify />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
+         <Route path="/main" element={<MainPage />} /> 
       </Routes>
     </Router>
   );
